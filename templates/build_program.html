@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+	<head>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css.css')}}">
+	<title>container logs</title>
+	</head>
+	<h1>container logs</h1>
+	<body>
+		{% if message %} 
+		<ul style="text-align:left">
+		{{ message|safe }}	
+		</ul>
+		 {% endif %}
+	</body>
+</html>

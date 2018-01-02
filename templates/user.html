@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<title>login</title>
+<head></head>
+<body>
+	<divi align="center">
+	<h1>user management</h1>
+	{% if message %} {{message}} {% endif %}
+	<form method="POST" enctype="multipart/form-data">
+		{{ form.username }}
+		<br/>
+		{{ form.password }}
+		<br/>
+		{{ form.submit }}
+		{% for error in form.username.errors %}
+			<span style="color: green;">{{ error }}</span>
+		{% endfor %}
+	</form>
+	</div>
+</body>
